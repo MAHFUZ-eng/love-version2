@@ -3,23 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Do you love me?</title>
-  
-  <!-- Link to external CSS -->
+  <title>Do you love me? ❤️</title>
   <link rel="stylesheet" href="Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h2>Do you love me?</h2>
-  <button id="yesBtn">Yes</button>
-  <button id="noBtn">No</button>
+  <!-- Splash GIF -->
+  <div id="splash">
+    <img src="poop.gif" alt="Welcome GIF" />
+  </div>
 
-  <video id="video" controls>
-    <source src="gay.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+  <!-- Background Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
 
-  <!-- Link to external JS -->
+  <!-- Main Content -->
+  <div class="container" id="mainContent">
+    <div class="question-box">
+      <h2>💖 Do you love me? 💖</h2>
+      <div class="button-group">
+        <button id="yesBtn">😍 Yes</button>
+        <button id="noBtn">😒 No</button>
+      </div>
+    </div>
+    <video id="video" controls>
+      <source src="gay.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
   <script src="Javascript.js"></script>
 </body>
 </html>
-

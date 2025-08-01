@@ -4,10 +4,13 @@ const video = document.getElementById('video');
 
 yesBtn.addEventListener('click', () => {
   video.style.display = 'block';
-  video.play();
+  setTimeout(() => {
+    video.style.opacity = 1;
+    video.style.transform = 'scale(1)';
+    video.play();
+  }, 100);
 });
 
-// Move NO button on hover and click
 noBtn.addEventListener('mouseover', moveButton);
 noBtn.addEventListener('click', moveButton);
 
@@ -17,11 +20,15 @@ function moveButton() {
   const btnWidth = noBtn.offsetWidth;
   const btnHeight = noBtn.offsetHeight;
 
-  const randomX = Math.floor(Math.random() * (containerWidth - btnWidth));
-  const randomY = Math.floor(Math.random() * (containerHeight - btnHeight));
+  const padding = 50;
+  const maxX = containerWidth - btnWidth - padding;
+  const maxY = containerHeight - btnHeight - padding;
+
+  const randomX = Math.floor(Math.random() * maxX) + padding / 2;
+  const randomY = Math.floor(Math.random() * maxY) + padding / 2;
 
   noBtn.style.position = 'absolute';
-  noBtn.style.left = randomX + 'px';
-  noBtn.style.top = randomY + 'px';
+  noBtn.style.left = `${randomX}px`;
+  noBtn.style.top = `${randomY}px`;
 }
 
